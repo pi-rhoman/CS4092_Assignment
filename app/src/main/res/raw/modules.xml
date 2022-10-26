@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataroot xmlns="">
+    <Lecturer>
+        <Name>Derek Bridge</Name>
+        <Department>Computer Science</Department>
+        <Field>AI</Field>
+        <ResearchAreas>
+            <ResearchArea>Recommender systems</ResearchArea>
+            <ResearchArea>Machine Learning</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Graham Kirby</Name>
+        <Department>Computer Science</Department>
+        <Field>Cloud Computing</Field>
+        <ResearchAreas>
+            <ResearchArea>Cognitive Science</ResearchArea>
+            <ResearchArea>Computational Linguistics</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>John McCarthy</Name>
+        <Department>Computer Science</Department>
+        <Field>Information Retrieval</Field>
+        <ResearchAreas>
+            <ResearchArea>Artificial Intelligence</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Marvin Minsky</Name>
+        <Department>Computer Science</Department>
+        <Field>Mobile Development</Field>
+        <ResearchAreas>
+            <ResearchArea>Artificial Intelligence</ResearchArea>
+            <ResearchArea>Cognitive Science</ResearchArea>
+            <ResearchArea>Machine Learning</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Patrick Suppes</Name>
+        <Department>Computer Science</Department>
+        <Field>AI</Field>
+        <ResearchAreas>
+            <ResearchArea>Artificial Intelligence</ResearchArea>
+            <ResearchArea>Cognitive Science</ResearchArea>
+            <ResearchArea>Philosophy of Mind</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Raj Reddy</Name>
+        <Department>Computer Science</Department>
+        <Field>AI</Field>
+        <ResearchAreas>
+            <ResearchArea>Artificial Intelligence</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Rodney Brooks</Name>
+        <Department>Computer Science</Department>
+        <Field>AI</Field>
+        <ResearchAreas>
+            <ResearchArea>Artificial Intelligence</ResearchArea>
+            <ResearchArea>Robotics</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Seymour Papert</Name>
+        <Department>Computer Science</Department>
+        <Field>AI</Field>
+        <ResearchAreas>
+            <ResearchArea>Artificial Intelligence</ResearchArea>
+            <ResearchArea>Cognitive Science</ResearchArea>
+            <ResearchArea>Constructionism</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+    <Lecturer>
+        <Name>Tom Mitchell</Name>
+        <Department>Computer Science</Department>
+        <Field>AI</Field>
+        <ResearchAreas>
+            <ResearchArea>Machine Learning</ResearchArea>
+            <ResearchArea>Cognitive Science</ResearchArea>
+        </ResearchAreas>
+    </Lecturer>
+</dataroot>
