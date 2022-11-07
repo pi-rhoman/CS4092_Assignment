@@ -9,16 +9,23 @@ import java.util.ArrayList;
 
 public class Lecturer {
 
-    public Lecturer(String name, String department, String field, String imageFileName, String url, String[] researchAreas) {
+    public Lecturer(Context context,
+                    String name,
+                    String department,
+                    String field,
+                    String imageFileName,
+                    String url,
+                    String[] researchAreas) {
         this.name = name;
         this.department = department;
         this.field = field;
         this.imageFileName = imageFileName;
+        // todo validate url
         this.Url = url;
         this.researchAreas = researchAreas;
 
         // get image from filename
-        //Integer id = context.getResources().getIdentifier(team_image, "drawable", context.getPackageName());
+        this.image = context.getResources().getIdentifier(imageFileName, "drawable", context.getPackageName());
     }
     public String getName() {
         return name;
@@ -50,9 +57,14 @@ public class Lecturer {
     String imageFileName;
     String Url;
     String [] researchAreas;
+    Integer image;
 
     public String toString() {
         return "Person(" + name + ", " + department +")";
+    }
+
+    public int getImage(){
+        return image;
     }
 
 }

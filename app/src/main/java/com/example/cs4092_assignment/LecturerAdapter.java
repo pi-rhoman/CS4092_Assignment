@@ -71,14 +71,14 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-
+        Log.d(TAG, "viewholder bound at position = " + position);
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         Lecturer lecturer = lecturers[position];
         viewHolder.getNameTextView().setText(lecturer.getName());
-        Log.d(TAG, "viewholder bound at position = " + position);
+        viewHolder.getProfileImageView().setImageResource(lecturer.getImage());
 
-        //todo viewHolder.getProfileImageView().setImageResource(lecturer.getImage());
+        Log.d(TAG, String.valueOf(lecturer.getImage()));
     }
 
     // Return the size of your dataset (invoked by the layout manager)

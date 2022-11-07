@@ -82,7 +82,8 @@ public class LecturersFromXML {
 
             String image = imageList.item(i).getFirstChild().getNodeValue();
             String url = urlList.item(i).getFirstChild().getNodeValue();
-            lecturers[i] = new Lecturer(name,
+            lecturers[i] = new Lecturer(context,
+                    name,
                     department,
                     field,
                     image,
