@@ -4,117 +4,140 @@
     <Lecturers
         id="lecturers">
         <Lecturer>
-            <Name>Derek Bridge</Name>
-            <Department> Science</Department>
-            <Field>AI</Field>
+            <Name>Graham Brady</Name>
+            <Department>Mathematics</Department>
+            <Field>Abstract algebra</Field>
             <ResearchAreas>
-                <ResearchArea>Recommender systems</ResearchArea>
-                <ResearchArea>Machine Learning</ResearchArea>
+                <ResearchArea>Group theory</ResearchArea>
+                <ResearchArea>Number theory</ResearchArea>
             </ResearchAreas>
-            <Bio>He is best known for his work in Case-Based Reasoning and Recommender Systems. For more information, see the pages that describe his Publications, his Research Interests, his Research Projects and his Research Recognition.
-                He moved to Cork to take up his Senior Lectureship in September 1997. Before that he spent eight years as a lecturer in the Department of Computer Science at the University of York. Over the years, his teaching has covered many areas of Computer Science and Artificial Intelligence.
-                Outside working hours, he can be found in pubs, in music venues, in book shops, walking up mountains, walking down mountains, in swimming pools, on aeroplanes to distant locations, and in transit between the aforementioned.
-                His favourite fish is the haddock.</Bio>
-            <Image>derek</Image>
-            <Url>http://www.example.com</Url>
-        </Lecturer>
-        <Lecturer>
-            <Name>Graham Kirby</Name>
-            <Department>Computer</Department>
-            <Field>Cloud Computing</Field>
-            <ResearchAreas>
-                <ResearchArea>Cognitive Science</ResearchArea>
-                <ResearchArea>Computational Linguistics</ResearchArea>
-            </ResearchAreas>
-            <Bio>a</Bio>
+            <Bio>Best known for a seminal work on étale cohomology of schemes, he was an Invited Speaker at the International Congress of Mathematicians in Hyderabad in 2010.
+                He has also worked on Galois representations, motives, and automorphic forms.
+                He was a visiting scholar at the Institute for Advanced Study in Princeton and at Harvard University.
+                He was a member of the editorial boards of Compositio Mathematica and the Journal of the London Mathematical Society.
+                He was also a plenary speaker at the British Mathematical Colloquium in Durham in 2009.</Bio>
             <Image>graham_kirby</Image>
-            <Url>http://www.example.com</Url>
+            <Url>https://en.wikipedia.org/wiki/Abstract_algebra</Url>
         </Lecturer>
         <Lecturer>
-            <Name>John McCarthy</Name>
-            <Department>Computer Science</Department>
-            <Field>Information Retrieval</Field>
+            <Name>John Mccarthy</Name>
+            <Department>Physics</Department>
+            <Field>Theoretical physics</Field>
             <ResearchAreas>
-                <ResearchArea>Artificial Intelligence</ResearchArea>
+                <ResearchArea>Quantum field theory</ResearchArea>
+                <ResearchArea>String theory</ResearchArea>
             </ResearchAreas>
-            <Bio>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Bio>
+            <Bio>He has worked on a variety of topics in quantum field theory and string theory, including the AdS/CFT correspondence, supersymmetric Yang-Mills theory, and the structure of higher-dimensional field theories.
+                He has been a visiting professor at the Institute for Advanced Study in Princeton and at Harvard University.
+                He was a plenary speaker at the International Congress of Mathematicians in Hyderabad in 2010.</Bio>
             <Image>john_mccarthy</Image>
-            <Url>http://www.example.com</Url>
+            <Url>https://en.wikipedia.org/wiki/Theoretical_physics</Url>
         </Lecturer>
         <Lecturer>
             <Name>Marvin Minsky</Name>
             <Department>Computer Science</Department>
-            <Field>Mobile Development</Field>
+            <Field>Artificial Intelligence</Field>
             <ResearchAreas>
-                <ResearchArea>Artificial Intelligence</ResearchArea>
-                <ResearchArea>Cognitive Science</ResearchArea>
-                <ResearchArea>Machine Learning</ResearchArea>
+                <ResearchArea>Cognitive science</ResearchArea>
+                <ResearchArea>Robotics</ResearchArea>
             </ResearchAreas>
-            <Bio>a</Bio>
+            <Bio>He is a pioneer in the field of Artificial Intelligence and cognitive science, and has made significant contributions to the fields of robotics, mathematics, and computer science.
+                He is a founder of the MIT Media Lab and the author of several books, including The Society of Mind and The Emotion Machine.
+                He has received numerous awards and honorary degrees, and is a member of the National Academy of Engineering and the American Academy of Arts and Sciences.
+                He is also a Fellow of the Association for the Advancement of Artificial Intelligence.</Bio>
             <Image>marvin_minsky</Image>
-            <Url>http://www.example.com</Url>
+            <Url>https://en.wikipedia.org/wiki/Artificial_intelligence</Url>
         </Lecturer>
         <Lecturer>
             <Name>Patrick Suppes</Name>
-            <Department>Computer Science</Department>
-            <Field>AI</Field>
+            <Department>Humanaties</Department>
+            <Field>Philosophy</Field>
             <ResearchAreas>
-                <ResearchArea>Artificial Intelligence</ResearchArea>
-                <ResearchArea>Cognitive Science</ResearchArea>
-                <ResearchArea>Philosophy of Mind</ResearchArea>
+                <ResearchArea>Philosophy of science</ResearchArea>
+                <ResearchArea>Philosophy of language</ResearchArea>
             </ResearchAreas>
-            <Bio>a</Bio>
+            <Bio>He is a philosopher of science and a mathematician, and is known for his work in the foundations of physics, probability, and decision theory.
+                He has also made contributions to the philosophy of language, the philosophy of mind, and the philosophy of education.
+                He is a member of the National Academy of Sciences and the American Academy of Arts and Sciences.
+                He has received the National Medal of Science, the Outstanding Lifetime Achievement Award in Humanities and Social Sciences from the American Association for the Advancement of Science, and the Distinguished Service Award from the American Philosophical Association.</Bio>
             <Image>patrick_suppes</Image>
-            <Url>http://www.example.com</Url>
+            <Url>https://en.wikipedia.org/wiki/Philosophy</Url>
         </Lecturer>
         <Lecturer>
             <Name>Raj Reddy</Name>
             <Department>Computer Science</Department>
-            <Field>AI</Field>
+            <Field>Artificial Intelligence</Field>
             <ResearchAreas>
-                <ResearchArea>Artificial Intelligence</ResearchArea>
+                <ResearchArea>Machine translation</ResearchArea>
+                <ResearchArea>Speech recognition</ResearchArea>
             </ResearchAreas>
-            <Bio>a</Bio>
+            <Bio>He is best known for his work in Artificial Intelligence and Human-Computer Interaction, and is a pioneer in the field of intelligent tutoring systems.
+                He has also made significant contributions to the fields of robotics, natural language processing, and machine translation.
+                He is a member of the National Academy of Engineering and the American Academy of Arts and Sciences.
+                He has received the ACM A.M. Turing Award, the Japan Prize, the IJCAI Research Excellence Award, and the Distinguished Service Award from the Association for Computing Machinery.</Bio>
             <Image>raj_reddy</Image>
-            <Url>http://www.example.com</Url>
+            <Url>https://en.wikipedia.org/wiki/Artificial_intelligence</Url>
         </Lecturer>
         <Lecturer>
-            <Name>Rodney Brooks</Name>
-            <Department>Computer Science</Department>
-            <Field>AI</Field>
+            <Name>Rodney Brookings</Name>
+            <Department>Natural Sciences</Department>
+            <Field>Biology</Field>
             <ResearchAreas>
-                <ResearchArea>Artificial Intelligence</ResearchArea>
-                <ResearchArea>Robotics</ResearchArea>
+                <ResearchArea>Evolutionary biology</ResearchArea>
+                <ResearchArea>Developmental biology</ResearchArea>
             </ResearchAreas>
-            <Bio>a</Bio>
-            <Image>rodney_brooks</Image>
-            <Url>http://www.example.com</Url>
+            <Bio>He is best known for his work on the evolution of developmental mechanisms, and is a pioneer in the field of evo-devo.
+                He has also made significant contributions to the fields of developmental biology, comparative genomics, and evolutionary developmental biology.
+                He is a member of the National Academy of Sciences and the American Academy of Arts and Sciences.
+                He has received the Charles Darwin Lifetime Achievement Award from the American Association for the Advancement of Science, and the George W. Beadle Medal from the Genetics Society of America.</Bio>
+            <Image>rodney_brookings</Image>
+            <Url>https://en.wikipedia.org/wiki/Biology</Url>
         </Lecturer>
         <Lecturer>
-            <Name>Seymour Papert</Name>
-            <Department>Computer Science</Department>
-            <Field>AI</Field>
+            <Name>Seymore Pepper</Name>
+
+            <Department>Economics</Department>
+            <Field>Econometrics</Field>
             <ResearchAreas>
-                <ResearchArea>Artificial Intelligence</ResearchArea>
-                <ResearchArea>Cognitive Science</ResearchArea>
-                <ResearchArea>Constructionism</ResearchArea>
+                <ResearchArea>Time series analysis</ResearchArea>
+                <ResearchArea>Macroeconomics</ResearchArea>
             </ResearchAreas>
-            <Bio>a</Bio>
-            <Image>seymore_papert</Image>
-            <Url>http://www.example.com</Url>
+            <Bio>He is best known for his work in econometrics, and is a pioneer in the field of time series analysis.
+                He has also made significant contributions to the fields of macroeconomics and monetary economics.
+                He is a member of the National Academy of Sciences and the American Academy of Arts and Sciences.
+                He has received the John Bates Clark Medal, the Nobel Memorial Prize in Economic Sciences, and the Distinguished Fellow Award from the American Economic Association.</Bio>
+            <Image>seymour_pepper</Image>
+            <Url>https://en.wikipedia.org/wiki/Econometrics</Url>
         </Lecturer>
         <Lecturer>
             <Name>Tom Mitchell</Name>
-            <Department>Computer Science</Department>
-            <Field>AI</Field>
+            <Department>Economics</Department>
+            <Field>Microeconomics</Field>
             <ResearchAreas>
-                <ResearchArea>Machine Learning</ResearchArea>
-                <ResearchArea>Cognitive Science</ResearchArea>
+                <ResearchArea>Game theory</ResearchArea>
+                <ResearchArea>Industrial organization</ResearchArea>
             </ResearchAreas>
-            <Bio>a</Bio>
+            <Bio>He is best known for his work in game theory and industrial organization, and is a pioneer in the field of mechanism design.
+                He has also made significant contributions to the fields of microeconomics and macroeconomics.
+                He is a member of the National Academy of Sciences and the American Academy of Arts and Sciences.
+                He has received the John Bates Clark Medal, the Nobel Memorial Prize in Economic Sciences, and the Distinguished Fellow Award from the American Economic Association.</Bio>
             <Image>tom_mitchell</Image>
-            <Url>http://www.example.com</Url>
+            <Url>https://en.wikipedia.org/wiki/Microeconomics</Url>
+        </Lecturer>
+        <Lecturer>
+            <Name>Victor Fuchs</Name>
+            <Department>Economics</Department>
+            <Field>Health economics</Field>
+            <ResearchAreas>
+                <ResearchArea>Labor economics</ResearchArea>
+                <ResearchArea>Public economics</ResearchArea>
+            </ResearchAreas>
+            <Bio>He is best known for his work in health economics and labor economics, and is a pioneer in the field of human capital.
+                He has also made significant contributions to the fields of public economics and development economics.
+                He is a member of the National Academy of Sciences and the American Academy of Arts and Sciences.
+                He has received the John Bates Clark Medal, the Nobel Memorial Prize in Economic Sciences, and the Distinguished Fellow Award from the American Economic Association.</Bio>
+            <Image>victor_fuchs</Image>
+            <Url>https://en.wikipedia.org/wiki/Health_economics</Url>
         </Lecturer>
     </Lecturers>
 </dataroot>

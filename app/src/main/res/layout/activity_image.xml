@@ -8,7 +8,6 @@
     tools:context=".ImageActivity"
     android:background="?colorOnPrimary"
     android:textSize="20sp">
-<!--    todo fix colour here-->
     <!-- todo fix warnings -->
 
     <TextView

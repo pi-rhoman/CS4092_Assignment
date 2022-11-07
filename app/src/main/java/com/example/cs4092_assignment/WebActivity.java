@@ -25,6 +25,20 @@ public class WebActivity extends AppCompatActivity {
         LecturerWebView = findViewById(R.id.teamWebView);
         LecturerWebView.loadUrl(l.getUrl());
 
+        LecturerWebView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                setTitle("loading");
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                setTitle(view.getTitle());
+            }
+        });
+
     }
 
 }
