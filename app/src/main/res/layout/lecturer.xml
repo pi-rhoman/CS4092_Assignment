@@ -5,17 +5,42 @@
     android:layout_height="wrap_content">
     <!--Todo make this look good-->
 
+
     <ImageView
         android:id="@+id/profile_pic"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:layout_margin="0dp"
+        android:contentDescription="@string/profile_pic_description" />
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="bottom|center"
+            android:textAlignment="gravity"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:textAlignment="gravity"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

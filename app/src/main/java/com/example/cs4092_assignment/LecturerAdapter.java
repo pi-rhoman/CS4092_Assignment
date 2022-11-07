@@ -23,7 +23,12 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView nameTextView;
+        private final TextView departmentTextView;
+
         private final ImageView profileImageView;
+        public TextView getDepartmentTextView() {
+            return departmentTextView;
+        }
 
         public ImageView getProfileImageView() {
             return profileImageView;
@@ -39,6 +44,7 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
 
             nameTextView = (TextView) view.findViewById(R.id.name);
             profileImageView = (ImageView) view.findViewById(R.id.profile_pic);
+            departmentTextView = (TextView) view.findViewById(R.id.department);
         }
 
 
@@ -81,6 +87,7 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
         Lecturer lecturer = lecturers[position];
         viewHolder.getNameTextView().setText(lecturer.getName());
         viewHolder.getProfileImageView().setImageResource(lecturer.getImage());
+        viewHolder.getDepartmentTextView().setText(lecturer.getDepartment());
 
         Log.d(TAG, String.valueOf(lecturer.getImage()));
     }
