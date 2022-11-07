@@ -1,5 +1,10 @@
 package com.example.cs4092_assignment;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
+import android.content.ContextWrapper;
+
 import java.util.ArrayList;
 
 public class Lecturer {
@@ -11,6 +16,9 @@ public class Lecturer {
         this.imageFileName = imageFileName;
         this.Url = url;
         this.researchAreas = researchAreas;
+
+        // get image from filename
+        //Integer id = context.getResources().getIdentifier(team_image, "drawable", context.getPackageName());
     }
     public String getName() {
         return name;
@@ -44,7 +52,7 @@ public class Lecturer {
     String [] researchAreas;
 
     public String toString() {
-        return name + ", " + department;
+        return "Person(" + name + ", " + department +")";
     }
 
 }

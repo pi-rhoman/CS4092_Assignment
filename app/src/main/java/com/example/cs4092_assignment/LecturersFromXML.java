@@ -20,7 +20,7 @@ public class LecturersFromXML {
     public static final String TAG = "LecturersFromXML";
     private Context context;
 
-    public Lecturer[] getLecturer() {
+    public Lecturer[] getLecturers() {
         return lecturers;
     }
 
@@ -51,7 +51,10 @@ public class LecturersFromXML {
 
         // make sure all the lecturers have the right attributes
         for(NodeList l: new ArrayList<>(Arrays.asList(departmentList, fieldList, researchAreasList, imageList, urlList))) {
-            assert nameList.getLength() == l.getLength();
+            if (nameList.getLength() != l.getLength()){
+                Log.e(TAG, l.toString());
+                assert false;
+            }
         }
 
         lecturers = new Lecturer[nameList.getLength()];
