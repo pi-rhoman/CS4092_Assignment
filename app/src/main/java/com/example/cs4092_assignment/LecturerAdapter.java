@@ -1,13 +1,23 @@
 package com.example.cs4092_assignment;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
+import android.transition.ChangeImageTransform;
+import android.transition.Explode;
+import android.transition.SidePropagation;
+import android.transition.Slide;
+import android.transition.Transition;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,7 +55,6 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
 
         public ViewHolder(View view) {
             super(view);
-            // todo Define click listener for the ViewHolder's View
 
 
             nameTextView = (TextView) view.findViewById(R.id.name);
@@ -101,12 +110,13 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
             // switch to activity 2
             Context context = viewHolder.itemView.getContext();
             Intent intent = new Intent(context, ImageActivity.class);
-            // transition names of both images are the same
-            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.
-                    makeSceneTransitionAnimation((Activity) context,
-                            iv,
-                            ViewCompat.getTransitionName(iv)
-                    );
+
+            // set an exit transition
+            Transition exitTransition = new Slide(Gravity.END)
+                    .setDuration(500);
+//            exitTransition.setPropagation(null);
+            ((Activity) context).getWindow().setExitTransition(exitTransition);
+            ((Activity) context).getWindow().setSharedElementEnterTransition(new ChangeImageTransform());
 
             // add the lecturer
             intent.putExtra("lecturer", lecturer);
@@ -120,7 +130,10 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
             Log.d(TAG,"size: " + size[0]+" "+size[1]);
             intent.putExtra("coords", coords);
             intent.putExtra("size", size);
-            context.startActivity(intent, optionsCompat.toBundle());
+
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, iv, "pic");
+
+            context.startActivity(intent, options.toBundle());
 
         });
 

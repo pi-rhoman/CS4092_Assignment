@@ -3,7 +3,6 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <!--Todo make this look good-->
 
 
     <ImageView
@@ -12,7 +11,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_margin="0dp"
-        android:contentDescription="@string/profile_pic_description"/>
+        android:contentDescription="@string/profile_pic_description"
+        android:transitionName="pic"/>
     <LinearLayout
         android:layout_weight="3"
         android:layout_width="0dp"

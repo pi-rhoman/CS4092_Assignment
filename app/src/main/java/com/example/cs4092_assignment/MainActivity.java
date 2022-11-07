@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.util.Log;
 import android.widget.Adapter;
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             LecturerAdapter adapter = new LecturerAdapter(l.getLecturers());
             recyclerView.setAdapter(adapter);        } catch (Exception e) {
             e.printStackTrace();
+
+
 
         }
 

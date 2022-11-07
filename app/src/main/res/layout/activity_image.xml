@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ImageActivity">
+    tools:context=".ImageActivity"
+    android:background="@color/white"
+    android:textSize="20sp">
 
     <TextView
         android:id="@+id/name"
@@ -16,10 +18,11 @@
 
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/profile_pic"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="50"/>
+        android:layout_weight="50"
+        android:transitionName="pic"/>
     <!-- todo add title for description -->
 
     <TextView
@@ -27,9 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="10"
-        android:textSize="20sp"/>
+        />
 
     <Button
+        android:id="@+id/more_details"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="10"
