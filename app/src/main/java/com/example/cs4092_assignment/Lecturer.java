@@ -5,13 +5,14 @@ import android.app.Application;
 import android.content.Context;
 import android.content.ContextWrapper;
 
+import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Lecturer {
+public class Lecturer implements Serializable {
 
     public Lecturer(Context context,
                     String name,

@@ -1,5 +1,8 @@
 package com.example.cs4092_assignment;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Arrays;
@@ -41,6 +46,7 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
         public ViewHolder(View view) {
             super(view);
             // todo Define click listener for the ViewHolder's View
+
 
             nameTextView = (TextView) view.findViewById(R.id.name);
             profileImageView = (ImageView) view.findViewById(R.id.profile_pic);
@@ -88,6 +94,35 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
         viewHolder.getNameTextView().setText(lecturer.getName());
         viewHolder.getProfileImageView().setImageResource(lecturer.getImage());
         viewHolder.getDepartmentTextView().setText(lecturer.getDepartment());
+
+        // add the onclick listener
+        viewHolder.itemView.setOnClickListener(view -> {
+            ImageView iv = viewHolder.getProfileImageView();
+            // switch to activity 2
+            Context context = viewHolder.itemView.getContext();
+            Intent intent = new Intent(context, ImageActivity.class);
+            // transition names of both images are the same
+            ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.
+                    makeSceneTransitionAnimation((Activity) context,
+                            iv,
+                            ViewCompat.getTransitionName(iv)
+                    );
+
+            // add the lecturer
+            intent.putExtra("lecturer", lecturer);
+
+            // add the coords
+            int[] coords = new int[2];
+
+            iv.getLocationOnScreen(coords);
+            int[] size = new int[]{iv.getMeasuredWidth(), iv.getMeasuredHeight()};
+            Log.d(TAG,"coords: " + coords[0]+" "+coords[1]);
+            Log.d(TAG,"size: " + size[0]+" "+size[1]);
+            intent.putExtra("coords", coords);
+            intent.putExtra("size", size);
+            context.startActivity(intent, optionsCompat.toBundle());
+
+        });
 
         Log.d(TAG, String.valueOf(lecturer.getImage()));
     }

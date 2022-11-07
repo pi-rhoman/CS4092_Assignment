@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
             RecyclerView recyclerView = findViewById(R.id.lecturers);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             LecturerAdapter adapter = new LecturerAdapter(l.getLecturers());
-            recyclerView.setAdapter(adapter);
-        } catch (Exception e) {
+            recyclerView.setAdapter(adapter);        } catch (Exception e) {
             e.printStackTrace();
+
         }
 
 

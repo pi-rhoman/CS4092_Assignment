@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_margin="0dp"
-        android:contentDescription="@string/profile_pic_description" />
+        android:contentDescription="@string/profile_pic_description"/>
     <LinearLayout
         android:layout_weight="3"
         android:layout_width="0dp"
@@ -27,9 +27,7 @@
             android:textAlignment="gravity"
             android:layout_marginTop="20dp"
             android:textStyle="bold"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="100sp"
+            android:textSize="20sp"
             android:layout_weight="1"/>
 
         <TextView
@@ -37,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="bottom|center"
+            android:gravity="top|center"
             android:textAlignment="gravity"/>
 
     </LinearLayout>
