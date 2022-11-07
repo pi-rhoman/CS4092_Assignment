@@ -6,27 +6,55 @@ import android.util.Log;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 public class LecturersFromXML {
 
     public static final String TAG = "LecturersFromXML";
     private Context context;
 
+    /**
+     *
+     * @return an array of lecturers generated from the input file
+     */
     public Lecturer[] getLecturers() {
         return lecturers;
     }
 
     private Lecturer[] lecturers;
-    // todo comment this monstrisity
-    public LecturersFromXML(Context context){
+
+    /**
+     * Parse an xml file full with elements of the form
+     *         <Lecturer>
+     *             <Name>Graham Kirby</Name>
+     *             <Department>Computer Science</Department>
+     *             <Field>Cloud Computing</Field>
+     *             <ResearchAreas>
+     *                 <ResearchArea>Cognitive Science</ResearchArea>
+     *                 <ResearchArea>Computational Linguistics</ResearchArea>
+     *             </ResearchAreas>
+     *             <Image>derek.png</Image>
+     *             <Url>http://www.example.com</Url>
+     *         </Lecturer>
+     * And generate an array of lecturers accessible via getLecturers()
+     * @param context the context of the application
+     * @throws IOException if IO errors occur getting the xml file
+     * @throws SAXException if parse errors occur parsing the xml file
+     */
+    public LecturersFromXML(Context context) throws IOException, SAXException {
         this.context = context;
 
         // make the input stream
@@ -37,9 +65,9 @@ public class LecturersFromXML {
         try {
             docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             xmlDoc = docBuilder.parse(stream);
-        } catch (Exception e){
-            //todo
-        }
+        } catch (IOException | SAXException e){
+            throw e;
+        } catch (ParserConfigurationException ignored){};
 
         // slice xmlDoc
         NodeList nameList = xmlDoc.getElementsByTagName("Name");
@@ -81,14 +109,24 @@ public class LecturersFromXML {
                 researchAreas[r] = researchAreasArrayList.get(r);
 
             String image = imageList.item(i).getFirstChild().getNodeValue();
+
             String url = urlList.item(i).getFirstChild().getNodeValue();
-            lecturers[i] = new Lecturer(context,
-                    name,
-                    department,
-                    field,
-                    image,
-                    url,
-                    researchAreas);
+            try{
+
+                new URL(url).toURI();
+            } catch (Exception e){
+                url = null;
+            }
+            try{
+                lecturers[i] = new Lecturer(context,
+                        name,
+                        department,
+                        field,
+                        image,
+                        url,
+                        researchAreas);
+            } catch (MalformedURLException | URISyntaxException ignored) {}
+
 
             Log.d(TAG, lecturers[i].toString());
             Log.d(TAG, Arrays.toString(lecturers[i].getResearchAreas()));

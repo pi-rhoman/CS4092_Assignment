@@ -5,6 +5,10 @@ import android.app.Application;
 import android.content.Context;
 import android.content.ContextWrapper;
 
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class Lecturer {
@@ -15,13 +19,12 @@ public class Lecturer {
                     String field,
                     String imageFileName,
                     String url,
-                    String[] researchAreas) {
+                    String[] researchAreas) throws MalformedURLException, URISyntaxException{
         this.name = name;
         this.department = department;
         this.field = field;
         this.imageFileName = imageFileName;
-        // todo validate url
-        this.Url = url;
+        setUrl(url);
         this.researchAreas = researchAreas;
 
         // get image from filename
@@ -47,15 +50,30 @@ public class Lecturer {
         return imageFileName;
     }
 
-    public String getUrl() {
-        return Url;
+    public URI getUrl() {
+        return url;
+    }
+
+    /**
+     *
+     * @param url well formed url or null
+     * @throws MalformedURLException if the url is invalid and non null
+     * @throws URISyntaxException if the uri syntax is invalid an non null
+     */
+    public void setUrl(String url) throws MalformedURLException, URISyntaxException {
+        if(url == null){
+            this.url = null;
+        } else {
+            this.url = new URL(url).toURI();
+        }
+
     }
 
     String name;
     String department;
     String field;
     String imageFileName;
-    String Url;
+    URI url;
     String [] researchAreas;
     Integer image;
 
