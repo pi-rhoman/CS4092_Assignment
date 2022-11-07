@@ -114,22 +114,15 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
             // set an exit transition
             Transition exitTransition = new Slide(Gravity.END)
                     .setDuration(500);
-//            exitTransition.setPropagation(null);
+
+            exitTransition.excludeTarget(android.R.id.statusBarBackground, true);
+            exitTransition.excludeTarget(android.R.id.navigationBarBackground, true);
+
             ((Activity) context).getWindow().setExitTransition(exitTransition);
             ((Activity) context).getWindow().setSharedElementEnterTransition(new ChangeImageTransform());
 
             // add the lecturer
             intent.putExtra("lecturer", lecturer);
-
-            // add the coords
-            int[] coords = new int[2];
-
-            iv.getLocationOnScreen(coords);
-            int[] size = new int[]{iv.getMeasuredWidth(), iv.getMeasuredHeight()};
-            Log.d(TAG,"coords: " + coords[0]+" "+coords[1]);
-            Log.d(TAG,"size: " + size[0]+" "+size[1]);
-            intent.putExtra("coords", coords);
-            intent.putExtra("size", size);
 
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, iv, "pic");
 

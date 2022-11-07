@@ -27,7 +27,8 @@ public class Lecturer implements Serializable {
         this.field = field;
         this.imageFileName = imageFileName;
         this.bio = bio;
-        setUrl(url);
+        setUri(url);
+        this.url = url;
         this.researchAreas = researchAreas;
 
         // get image from filename
@@ -53,8 +54,8 @@ public class Lecturer implements Serializable {
         return imageFileName;
     }
 
-    public URI getUrl() {
-        return url;
+    public URI getUri() {
+        return uri;
     }
 
     /**
@@ -63,11 +64,11 @@ public class Lecturer implements Serializable {
      * @throws MalformedURLException if the url is invalid and non null
      * @throws URISyntaxException if the uri syntax is invalid an non null
      */
-    public void setUrl(String url) throws MalformedURLException, URISyntaxException {
+    public void setUri(String url) throws MalformedURLException, URISyntaxException {
         if(url == null){
-            this.url = null;
+            this.uri = null;
         } else {
-            this.url = new URL(url).toURI();
+            this.uri = new URL(url).toURI();
         }
 
     }
@@ -76,11 +77,9 @@ public class Lecturer implements Serializable {
     String department;
     String field;
     String imageFileName;
-
-
-
     String bio;
-    URI url;
+    String url;
+    URI uri;
     String [] researchAreas;
     Integer image;
 
@@ -95,4 +94,9 @@ public class Lecturer implements Serializable {
     public String getBio() {
         return bio;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
 }

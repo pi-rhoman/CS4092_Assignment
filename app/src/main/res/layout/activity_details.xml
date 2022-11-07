@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ImageActivity"
-    android:textSize="20sp"
+
     android:background="@color/white">
 
     <TextView
@@ -14,30 +14,62 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="40sp"/>
-
-
-    <!-- todo add title for description -->
-
-    <TextView
-        android:id="@+id/desc"
+        android:textColor="?colorPrimary"
+        android:textSize="40sp"
+        android:transitionName="name"/>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
+        android:orientation="vertical"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:layout_weight="60">
+        <TextView
+            android:id="@+id/desc_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/normal_text"
+            android:textColor="?colorPrimary"
+            android:text="Description"
+            android:transitionName="desc_title"/>
 
-        />
-<!--todo remove white space here-->
-    <TextView
-        android:id="@+id/bio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-<!--todo fix button size-->
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:textSize="@dimen/normal_text"
+            android:transitionName="desc"
+            />
+        <TextView
+            android:id="@+id/bio_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/normal_text"
+            android:textColor="?colorPrimary"
+            android:text="Biography"
+            android:transitionName="bio_title"/>
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_text"
+            android:layout_weight="50"/>
+    </LinearLayout>
     <Button
         android:id="@+id/link"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="@dimen/normal_text"
+        android:backgroundTint="?colorOnPrimary"
+        android:textColor="?colorPrimary"
         android:layout_gravity="center_horizontal"
-        android:text="Go to field wikipedia"/>
+        android:text="Wikipedia"
+        android:transitionName="button"/>
+
 
 </LinearLayout>

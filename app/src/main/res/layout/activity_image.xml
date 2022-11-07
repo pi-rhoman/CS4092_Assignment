@@ -6,15 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ImageActivity"
-    android:background="@color/white"
+    android:background="?colorOnPrimary"
     android:textSize="20sp">
+<!--    todo fix colour here-->
+    <!-- todo fix warnings -->
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="40sp"/>
+        android:textSize="40sp"
+        android:textColor="?colorPrimary"/>
 
 
     <ImageView
@@ -23,21 +26,41 @@
         android:layout_height="0dp"
         android:layout_weight="50"
         android:transitionName="pic"/>
-    <!-- todo add title for description -->
-
-    <TextView
-        android:id="@+id/desc"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="10"
-        />
+        android:padding="20sp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/desc_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/normal_text"
+            android:textColor="?colorPrimary"
+            android:text="Description"/>
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="top"
+            android:textSize="@dimen/normal_text"
+            />
+    </LinearLayout>
 
     <Button
         android:id="@+id/more_details"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
-        android:text="View More Details"/>
+        android:backgroundTint="?colorOnPrimary"
+        android:textColor="?colorPrimary"
+        android:textSize="@dimen/normal_text"
+        android:text="Details"/>
 
 </LinearLayout>

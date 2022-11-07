@@ -3,6 +3,8 @@ package com.example.cs4092_assignment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -25,19 +27,25 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+        Slide enterTransition = new Slide(Gravity.BOTTOM);
+
+        enterTransition.excludeTarget(android.R.id.statusBarBackground, true);
+        enterTransition.excludeTarget(android.R.id.navigationBarBackground, true);
+
+        DetailsActivity.this.getWindow().setEnterTransition(enterTransition
+                .setDuration(500));
+
         buttonNext =findViewById(R.id.link);
 
         Lecturer l = (Lecturer) getIntent().getExtras().getSerializable("lecturer");
-        // todo go to next activity
-//        buttonNext.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(DetailsActivity.this, Activity4.class);
-//                intent.putExtra("team_name", t);
-//                startActivity(intent);
-//            }
-//        });
-        // todo make name, desc transition from other activity
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(DetailsActivity.this, WebActivity.class);
+                intent.putExtra("lecturer", l);
+                startActivity(intent);
+            }
+        });
         name = findViewById(R.id.name);
         name.setText(l.getName());
         desc = findViewById(R.id.desc);
