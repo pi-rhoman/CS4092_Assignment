@@ -17,15 +17,21 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // todo add searchview
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LecturersFromXML l = new LecturersFromXML(this);
+        try{
+            LecturersFromXML l = new LecturersFromXML(this);
+            Log.d(TAG, Arrays.toString(l.getLecturers()));
 
-        Log.d(TAG, Arrays.toString(l.getLecturers()));
+            RecyclerView recyclerView = findViewById(R.id.lecturers);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            LecturerAdapter adapter = new LecturerAdapter(l.getLecturers());
+            recyclerView.setAdapter(adapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        RecyclerView recyclerView = findViewById(R.id.lecturers);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        LecturerAdapter adapter = new LecturerAdapter(l.getLecturers());
-        recyclerView.setAdapter(adapter);
+
     }
 }

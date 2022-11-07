@@ -15,11 +15,10 @@ import java.util.Arrays;
 
 public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHolder> {
     public static final String TAG = "Adapter";
-    // todo redo comments
     private Lecturer[] lecturers;
 
     /**
-     * Provide a reference to the type of views that you are using
+     * Provide a reference to the views in the layout
      * (custom ViewHolder).
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -48,7 +47,7 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
     /**
      * Initialize the dataset of the Adapter.
      *
-     * @param dataSet String[] containing the data to populate views to be used
+     * @param dataSet Lecturer[] containing the data to populate views to be used
      * by RecyclerView.
      */
     public LecturerAdapter(Lecturer[] dataSet) {
@@ -57,7 +56,10 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
         Log.d(TAG, "dataset_length = " + lecturers.length);
     }
 
-    // Create new views (invoked by the layout manager)
+    /**
+     * Create new views (invoked by the layout manager)
+      */
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -68,7 +70,9 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
         return new ViewHolder(view);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     *     Replace the contents of a view (invoked by the layout manager)
+      */
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "viewholder bound at position = " + position);
@@ -81,7 +85,9 @@ public class LecturerAdapter extends RecyclerView.Adapter<LecturerAdapter.ViewHo
         Log.d(TAG, String.valueOf(lecturer.getImage()));
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     *  @return the size of your dataset (invoked by the layout manager)
+      */
     @Override
     public int getItemCount() {
         return lecturers.length;
