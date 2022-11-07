@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dataroot xmlns=""
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--Todo add images-->
     <Lecturers
         id="lecturers">
         <Lecturer>
@@ -12,17 +11,22 @@
                 <ResearchArea>Recommender systems</ResearchArea>
                 <ResearchArea>Machine Learning</ResearchArea>
             </ResearchAreas>
+            <Bio>He is best known for his work in Case-Based Reasoning and Recommender Systems. For more information, see the pages that describe his Publications, his Research Interests, his Research Projects and his Research Recognition.
+                He moved to Cork to take up his Senior Lectureship in September 1997. Before that he spent eight years as a lecturer in the Department of Computer Science at the University of York. Over the years, his teaching has covered many areas of Computer Science and Artificial Intelligence.
+                Outside working hours, he can be found in pubs, in music venues, in book shops, walking up mountains, walking down mountains, in swimming pools, on aeroplanes to distant locations, and in transit between the aforementioned.
+                His favourite fish is the haddock.</Bio>
             <Image>derek</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
         <Lecturer>
             <Name>Graham Kirby</Name>
-            <Department>Computer </Department>
+            <Department>Computer</Department>
             <Field>Cloud Computing</Field>
             <ResearchAreas>
                 <ResearchArea>Cognitive Science</ResearchArea>
                 <ResearchArea>Computational Linguistics</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>graham_kirby</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -33,6 +37,8 @@
             <ResearchAreas>
                 <ResearchArea>Artificial Intelligence</ResearchArea>
             </ResearchAreas>
+            <Bio>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Bio>
             <Image>john_mccarthy</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -45,6 +51,7 @@
                 <ResearchArea>Cognitive Science</ResearchArea>
                 <ResearchArea>Machine Learning</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>marvin_minsky</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -57,6 +64,7 @@
                 <ResearchArea>Cognitive Science</ResearchArea>
                 <ResearchArea>Philosophy of Mind</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>patrick_suppes</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -67,6 +75,7 @@
             <ResearchAreas>
                 <ResearchArea>Artificial Intelligence</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>raj_reddy</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -78,6 +87,7 @@
                 <ResearchArea>Artificial Intelligence</ResearchArea>
                 <ResearchArea>Robotics</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>rodney_brooks</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -90,6 +100,7 @@
                 <ResearchArea>Cognitive Science</ResearchArea>
                 <ResearchArea>Constructionism</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>seymore_papert</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>
@@ -101,6 +112,7 @@
                 <ResearchArea>Machine Learning</ResearchArea>
                 <ResearchArea>Cognitive Science</ResearchArea>
             </ResearchAreas>
+            <Bio>a</Bio>
             <Image>tom_mitchell</Image>
             <Url>http://www.example.com</Url>
         </Lecturer>

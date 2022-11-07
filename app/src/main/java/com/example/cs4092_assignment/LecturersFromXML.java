@@ -48,6 +48,10 @@ public class LecturersFromXML {
      *             </ResearchAreas>
      *             <Image>derek.png</Image>
      *             <Url>http://www.example.com</Url>
+     *             <Bio>He is best known for his work in Case-Based Reasoning and Recommender Systems. For more information, see the pages that describe his Publications, his Research Interests, his Research Projects and his Research Recognition.
+     *                 He moved to Cork to take up his Senior Lectureship in September 1997. Before that he spent eight years as a lecturer in the Department of Computer Science at the University of York. Over the years, his teaching has covered many areas of Computer Science and Artificial Intelligence.
+     *                 Outside working hours, he can be found in pubs, in music venues, in book shops, walking up mountains, walking down mountains, in swimming pools, on aeroplanes to distant locations, and in transit between the aforementioned.
+     *                 His favourite fish is the haddock.</Bio>
      *         </Lecturer>
      * And generate an array of lecturers accessible via getLecturers()
      * @param context the context of the application
@@ -74,11 +78,12 @@ public class LecturersFromXML {
         NodeList departmentList = xmlDoc.getElementsByTagName("Department");
         NodeList fieldList = xmlDoc.getElementsByTagName("Field");
         NodeList researchAreasList = xmlDoc.getElementsByTagName("ResearchAreas");
+        NodeList bioList = xmlDoc.getElementsByTagName("Bio");
         NodeList imageList = xmlDoc.getElementsByTagName("Image");
         NodeList urlList = xmlDoc.getElementsByTagName("Url");
 
         // make sure all the lecturers have the right attributes
-        for(NodeList l: new ArrayList<>(Arrays.asList(departmentList, fieldList, researchAreasList, imageList, urlList))) {
+        for(NodeList l: new ArrayList<>(Arrays.asList(departmentList, fieldList, researchAreasList, imageList, urlList, bioList))) {
             if (nameList.getLength() != l.getLength()){
                 Log.e(TAG, l.toString());
                 assert false;
@@ -107,12 +112,11 @@ public class LecturersFromXML {
             // ArrayList to Array Conversion
             for (int r = 0; r < researchAreasArrayList.size(); r++)
                 researchAreas[r] = researchAreasArrayList.get(r);
-
+            String bio = bioList.item(i).getFirstChild().getNodeValue();
             String image = imageList.item(i).getFirstChild().getNodeValue();
 
             String url = urlList.item(i).getFirstChild().getNodeValue();
             try{
-
                 new URL(url).toURI();
             } catch (Exception e){
                 url = null;
@@ -123,6 +127,7 @@ public class LecturersFromXML {
                         department,
                         field,
                         image,
+                        bio,
                         url,
                         researchAreas);
             } catch (MalformedURLException | URISyntaxException ignored) {}

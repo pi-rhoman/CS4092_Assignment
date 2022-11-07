@@ -19,12 +19,14 @@ public class Lecturer implements Serializable {
                     String department,
                     String field,
                     String imageFileName,
+                    String bio,
                     String url,
                     String[] researchAreas) throws MalformedURLException, URISyntaxException{
         this.name = name;
         this.department = department;
         this.field = field;
         this.imageFileName = imageFileName;
+        this.bio = bio;
         setUrl(url);
         this.researchAreas = researchAreas;
 
@@ -74,6 +76,10 @@ public class Lecturer implements Serializable {
     String department;
     String field;
     String imageFileName;
+
+
+
+    String bio;
     URI url;
     String [] researchAreas;
     Integer image;
@@ -86,4 +92,7 @@ public class Lecturer implements Serializable {
         return image;
     }
 
+    public String getBio() {
+        return bio;
+    }
 }
